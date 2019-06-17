@@ -3,24 +3,28 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeroesComponent } from './heroes/heroes.component';
 
 //import NgModule
 import {FormsModule} from '@angular/forms';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';// < - NgModule lives here
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { YoutubeListComponent } from './youtube-list/youtube-list.component';// < - NgModule lives here
+import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent,
-    HeroDetailComponent
+    DashboardComponent,
+    YoutubeListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     //import NgModule
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
